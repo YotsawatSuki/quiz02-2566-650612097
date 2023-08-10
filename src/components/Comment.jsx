@@ -32,16 +32,8 @@ export const Comment = ({
             <span style={{ color: "#B0B3B8" }}>{likeNum} คน</span>
           )}
         </div>
+        {replies}
       </div>
-      {replies.map((rep) => (
-        <Reply
-          userImagePath={rep.userImagePath}
-          username={rep.username}
-          replyText={rep.replyText}
-          likeNum={rep.likeNum}
-          key={rep.likeNum}
-        />
-      ))}
     </div>
   );
 };

@@ -27,7 +27,15 @@ export default function HomePage() {
             username={comm.username}
             commentText={comm.commentText}
             likeNum={comm.likeNum}
-            replies={comm.replies}
+            replies={comm.replies.map((rep) => (
+              <Reply
+                userImagePath={rep.userImagePath}
+                username={rep.username}
+                replyText={rep.replyText}
+                likeNum={rep.likeNum}
+                key={rep.likeNum}
+              />
+            ))}
           />
         ))}
       </div>
